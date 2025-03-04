@@ -19,7 +19,7 @@ with order_items as (
 
 
     from {{ref('stg_order_items')}} as orderitems
-    full join {{source('local_bike', 'orders')}} as orders
+    full join {{ref('stg_orders')}} as orders
     on orders.order_id = orderitems.order_id
 )
 
