@@ -7,6 +7,7 @@ with order_items as (
     orders.customer_id,
     orders.order_status,
     orders.order_date,
+    EXTRACT(YEAR FROM orders.order_date) AS year_order,
     orders.required_date,
     orders.shipped_date,
     orders.store_id,
