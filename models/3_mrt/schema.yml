@@ -1,0 +1,17 @@
+
+version: 2
+
+models:
+    - name: mrt_customer_info
+      description: "Analyse de l'activité client par client"
+      columns:
+          - name: customer_id
+            description: "ID du client, clé primaire"
+            tests:
+                - unique
+                - not_null
+          - name: order_count
+            description: "total_depense"
+
+          - name: total_depense
+            description: "Somme des dépenses par commande et par client"
